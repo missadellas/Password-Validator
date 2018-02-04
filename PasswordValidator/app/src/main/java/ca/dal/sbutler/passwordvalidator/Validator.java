@@ -6,9 +6,16 @@ package ca.dal.sbutler.passwordvalidator;
 
 public class Validator {
 
-    validate(){
-
-
-
+    public int validate(String password) {
+        int strength = 0;
+        //rule 1
+        if (!password.equalsIgnoreCase("password")) {
+            strength++;
+        }
+        if (password.length() >= 8) {
+            //rule 2
+            strength++;
+        }
+        return strength;
     }
 }
