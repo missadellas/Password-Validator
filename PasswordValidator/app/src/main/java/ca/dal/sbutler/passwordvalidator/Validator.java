@@ -45,4 +45,24 @@ public class Validator {
         }
         return strength;
     }
+    public String determineStrength(int strength){
+        String result = "";
+        if(strength==1){
+            result= "Password is very weak";
+        }
+        else if(strength==2){
+            result= "Password is weak";
+        }
+        else if(strength==3){
+            result = "Password is not strong enough";
+        }
+        else if(strength==4){
+            result = "Password is strong";
+        }
+        else{
+            result= "Password is very Strong";
+        }
+        return result;
+    }
+
 }
