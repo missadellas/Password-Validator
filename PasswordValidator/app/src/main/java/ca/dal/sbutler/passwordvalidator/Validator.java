@@ -45,6 +45,8 @@ public class Validator {
         }
         return strength;
     }
+
+    //feedback based on strength of password
     public String determineStrength(int strength){
         String result = "";
         if(strength==1){
