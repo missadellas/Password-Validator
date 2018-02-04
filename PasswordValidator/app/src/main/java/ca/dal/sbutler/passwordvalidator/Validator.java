@@ -16,6 +16,33 @@ public class Validator {
             //rule 2
             strength++;
         }
+
+        //rule 3 must contain at least one uppercase letter
+        for (int i = 0; i < password.length(); i++) {
+            int asciiChar = (int) password.charAt(i);
+
+            if (asciiChar <= 90 && asciiChar >= 65) {
+                strength++;
+                break;
+            }
+        }
+        //rule 4 must contain at least 1 digit
+        for (int i = 0; i < password.length(); i++) {
+            int asciiChar = (int) password.charAt(i);
+            if (asciiChar <= 57 && asciiChar >= 48) {
+                strength++;
+                break;
+            }
+        }
+        //rule 5 contains a special character
+        for (int i = 0; i < password.length(); i++) {
+            int asciiChar = (int) password.charAt(i);
+            if (asciiChar >= 33 && asciiChar < 48 || asciiChar > 57 && asciiChar < 65 || asciiChar > 90 && asciiChar < 97 || asciiChar > 122 && asciiChar <= 126) {
+                strength++;
+                break;
+            }
+
+        }
         return strength;
     }
 }
