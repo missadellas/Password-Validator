@@ -43,42 +43,48 @@ public class MainActivityTest {
 
 
     @Test
-    public void validationTest() throws Exception {
+    public void TestStrength1() throws Exception {
         //test password of strength 1
         Espresso.onView(withId(R.id.PasswordEditText)).perform(typeText(strength1));
         Espresso.closeSoftKeyboard();
         Espresso.onView(withId(R.id.ValidateBtn)).perform(click());
         Espresso.onView(withId(R.id.StrengthTextView)).check(matches(withText(result1)));
-        Espresso.onView(withId(R.id.PasswordEditText)).perform(clearText());
+    }
 
-        //test password of strength 2
+    //test password of strength 2
+    @Test
+    public void TestStrength2() throws Exception {
         Espresso.onView(withId(R.id.PasswordEditText)).perform(typeText(strength2));
         Espresso.closeSoftKeyboard();
         Espresso.onView(withId(R.id.ValidateBtn)).perform(click());
         Espresso.onView(withId(R.id.StrengthTextView)).check(matches(withText(result2)));
-        Espresso.onView(withId(R.id.PasswordEditText)).perform(clearText());
+    }
 
+    @Test
+    public void TestStrength3() throws Exception {
         //test password of strength 3
         Espresso.onView(withId(R.id.PasswordEditText)).perform(typeText(strength3));
         Espresso.closeSoftKeyboard();
         Espresso.onView(withId(R.id.ValidateBtn)).perform(click());
         Espresso.onView(withId(R.id.StrengthTextView)).check(matches(withText(result3)));
-        Espresso.onView(withId(R.id.PasswordEditText)).perform(clearText());
+    }
 
+    @Test
+    public void TestStrength4() throws Exception {
         //test password of strength 4
         Espresso.onView(withId(R.id.PasswordEditText)).perform(typeText(strength4));
         Espresso.closeSoftKeyboard();
         Espresso.onView(withId(R.id.ValidateBtn)).perform(click());
         Espresso.onView(withId(R.id.StrengthTextView)).check(matches(withText(result4)));
-        Espresso.onView(withId(R.id.PasswordEditText)).perform(clearText());
+    }
 
+    @Test
+    public void TestStrength5() throws Exception {
         //test password of strength 5
         Espresso.onView(withId(R.id.PasswordEditText)).perform(typeText(strength5));
         Espresso.closeSoftKeyboard();
         Espresso.onView(withId(R.id.ValidateBtn)).perform(click());
         Espresso.onView(withId(R.id.StrengthTextView)).check(matches(withText(result5)));
-        Espresso.onView(withId(R.id.PasswordEditText)).perform(clearText());
-
     }
 
 }
